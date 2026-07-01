@@ -1,0 +1,48 @@
+# ============================================================
+# .gitignore for dea-sfa-tilapia-jambi
+# Survey data are NOT included in this repository due to
+# respondent privacy considerations (see README.md and the
+# manuscript's Data Availability statement).
+# ============================================================
+
+# --- Raw and clean survey data (NEVER upload to GitHub) ---
+*.xlsx
+*.xls
+*.csv
+data/
+data_clean*/
+dmu_trimmed*/
+
+# --- RDS files (intermediate model output, large) ---
+# Omit by default; add individual files to .gitignore_allow if needed
+*.rds
+
+# --- R session artefacts ---
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# --- Output folders (plots, tables, word/tex exports) ---
+# These are reproducible from the scripts; no need to version-control them
+Journal_2_rev/
+output/
+outputs/
+
+# --- OS clutter ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Temporary / draft files ---
+~$*
+*.tmp
+*_DRAFT*
+*_OLD*
+
+# ============================================================
+# EXCEPTION: keep the setup script and helpers
+# (explicitly track these even if they match patterns above)
+# ============================================================
+!J2_00_Helpers.R
+!00_setup.R
